@@ -1,6 +1,8 @@
 FROM python:2.7
 MAINTAINER nasuno@ascade.co.jp
 
+RUN apt-get update && apt-get -y install libcurl4-nss-dev
+
 ADD http://fantom.gsc.riken.jp/5/suppl/aln_filter/src/Makefile Makefile
 ADD http://fantom.gsc.riken.jp/5/suppl/aln_filter/src/main.c main.c
 ADD http://fantom.gsc.riken.jp/5/suppl/aln_filter/src/aln_filter.h aln_filter.h
